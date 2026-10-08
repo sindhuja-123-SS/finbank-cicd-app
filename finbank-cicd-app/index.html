@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinBank - Online Banking</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f7fb; color: #1f2937; }
+    header { background: #123c69; color: white; padding: 22px 8%; }
+    main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+    .card { background: white; padding: 25px; margin-bottom: 20px; border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,.08); }
+    .balance { font-size: 32px; font-weight: bold; color: #123c69; }
+    button { background: #123c69; color: white; border: 0; padding: 12px 20px;
+             border-radius: 6px; cursor: pointer; }
+    button:hover { background: #0d2d4f; }
+    #message { margin-top: 15px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FinBank</h1>
+    <p>Online Banking Application</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>Welcome to FinBank</h2>
+      <p>Customer: Demo User</p>
+      <p>Account Balance</p>
+      <div class="balance">₹50,000</div>
+    </div>
+
+    <div class="card">
+      <h2>Quick Transaction</h2>
+      <button onclick="showMessage()">Check Account Status</button>
+      <div id="message"></div>
+    </div>
+
+    <div class="card">
+      <h2>Recent Transactions</h2>
+      <ul>
+        <li>ATM Withdrawal - ₹2,000</li>
+        <li>Online Payment - ₹1,500</li>
+        <li>Salary Credit - ₹35,000</li>
+      </ul>
+    </div>
+  </main>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent =
+        "Account is active and available.";
+    }
+  </script>
+</body>
+</html>
